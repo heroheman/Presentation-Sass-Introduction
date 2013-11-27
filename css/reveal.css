@@ -1651,3 +1651,9 @@ body {
 }
 
 
+
+/*Mein Zeuch*/
+.split{
+	display: inline-block;
+	width: 45%;
+}
