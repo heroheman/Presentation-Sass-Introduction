@@ -54,6 +54,13 @@
                         <h2>HTML + CSS</h2>
                         <h1 class="fragment">ist keine Programmierung</h1>
                         <p class="fragment">...wirklich nicht!</p>
+                        <aside class="notes">
+                            <ul>
+                                <li>"Photoshop ohne Oberfläche</li>
+                                <li>Kann bloß um einiges mehr</li>
+                                <li>Designs dort erstellen wo sie auch betrachtet werden</li>
+                            </ul>
+                        </aside>
                     </section>
                     <section>
                         <h2>Aha... <span class="fragment">Interessant...</span> <span class="fragment">Und?</span></h2>
@@ -64,6 +71,14 @@
                             <li class="fragment">Es ist immer dasselbe</li>
                             <li class="fragment">Lose the respect</li>
                         </ul>
+                        <aside class="notes">
+                            <ul>
+                                <li>Keine Logik</li>
+                                <li>Immer gleicher Aufbau</li>
+                                <li>keine Dynamik</li>
+                                <li>keine Funktionen</li>
+                            </ul>
+                        </aside>
                     </section>
                     <section>
                         <blockquote>CSS ist dass, was zwischen den Klammern steht
@@ -91,6 +106,13 @@
                             <li class="fragment" data-fragment-index="4">Starr und unflexibel</li>
                             <li class="fragment" data-fragment-index="5">ziemlich <span class="fragment highlight-red" data-fragment-index="6">repetiv</span></li>
                         </ul>
+                        <aside class="notes">
+                            <ul>
+                                <li>DRY Prinzip</li>
+                                <li>Kleine Änderungen können sehr komplex werden</li>
+                                <li>Analogie Photoshop und verschiedene PSDs</li>
+                            </ul>
+                        </aside>
                     </section>
 
                     <section>
@@ -105,6 +127,15 @@
                         <p>
                             <strong class="fragment">Im Wesentlichen: CSS wie es sein sollte!</strong>
                         </p>
+                        <aside class="notes">
+                            <ul>
+                                <li class="">Erweitertes CSS mit zusätzlichen Features</li>
+                                <li class="">Sauber formatiert</li>
+                                <li class="">Leicht pflegbar</li>
+                                <li class="">Schnell zu erlernen</li>
+                                <li class="">"Don't repeat yourself"-Prinzip</li>
+                            </ul>
+                        </aside>
                     </section>
                 </section>
 
@@ -117,6 +148,9 @@
                             <li>Terminal öffnen: <code>sudo gem install sass</code></li>
                             <li>Done</li>
                         </ol>
+                        <aside class="notes">
+                            Wer hatte Probleme? Sassmeister.com?
+                        </aside>
                     </section>
                     <section>
                         <h2>Ausführen</h2>
@@ -158,6 +192,7 @@
                         <aside class="notes">
                             <ul>
                                 <li>LESS und Stylus erwähnen</li>
+                                <li>SASS Syntax besser vermeiden, keine Ruby Entwickler</li>
                             </ul>
                         </aside>
                     </section>
@@ -165,17 +200,30 @@
 
                 <section data-background="#469D7A" class="text-left">
                     <h2>TL;DR</h2>
-                        <li>HTML & CSS ist keine hohe Kunst</li>
-                        <li>CSS ist eigentlich ziemlich für'n A****</li>
-                        <li>SASS: *Thumbs up*</li>
-                        <li>Jede CSS Datei ist bereits eine SCSS Datei</li>
-                        <li>Installation mit <code>sudo gem install sass</code></li>
-                        <li>Ausführen mit <code>sass --watch style.scss:style.css</code></li>
-                        <li>Jede Menge GUIs / Apps verfügbar</li>
+                    <ul>
+                        <li class="fragment">HTML & CSS ist keine hohe Kunst</li>
+                        <li class="fragment">CSS ist eigentlich ziemlich für'n A****</li>
+                        <li class="fragment">SASS: *Thumbs up*</li>
+                        <li class="fragment">Jede CSS Datei ist bereits eine SCSS Datei</li>
+                        <li class="fragment">Installation mit <code>sudo gem install sass</code></li>
+                        <li class="fragment">Ausführen mit <code>sass --watch style.scss:style.css</code></li>
+                        <li class="fragment">Jede Menge GUIs / Apps verfügbar</li>
+                    </ul>
+                    <aside class="notes">
+                        <ul>
+                            <li class="">HTML & CSS ist keine hohe Kunst</li>
+                            <li class="">CSS ist eigentlich ziemlich für'n A****</li>
+                            <li class="">SASS: *Thumbs up*</li>
+                            <li class="">Jede CSS Datei ist bereits eine SCSS Datei</li>
+                            <li class="">Installation mit <code>sudo gem install sass</code></li>
+                            <li class="">Ausführen mit <code>sass --watch style.scss:style.css</code></li>
+                            <li class="">Jede Menge GUIs / Apps verfügbar</li>
+                        </ul>
+                    </aside>
                 </section>
 
                 <section data-background="#A4C290" class="text-left">
-                    <section><h2>Teil 2: Grundlegendes</h2></section>
+                    <section><h2>Teil 2: <span class="fragment">Grundlegendes</span></h2></section>
                 </section>
 
                 <section data-background="#A4C290" class="text-left">
@@ -237,21 +285,50 @@ a.mein-link:before, a:hover{ content: ""; }
 a.mein-link.active{ color: #f00; }
 a.mein-link.active:hover{ color: black; }
     </code></pre>
-
+                        <aside class="notes">
+                            <aside class="notes">
+                                <p>Aufgabe: Nimmt aus einen eurer Projekte einen Schnipsel und baut es um - Sassmeister.com</p>
+                            </aside>
+                        </aside>
                     </section>
+
+                    <section>
+                        <h3>Achtung</h3>
+                        <ul>
+                            <li>Verschachtelung ist sehr praktisch</li>
+                            <li>Aber: Übertreibt es nicht!</li>
+                            <li class="fragment">Niemand will: </li>
+                        </ul>
+                        <pre class="fragment"><code data-trim>
+.module div.inner ul li ul li > a:hover span{ color: red; }
+.module div.inner ul li ul li > a:active span{ color: green; }
+// etc...
+                        </code></pre>
+                        <ul class="fragment">
+                            <li>Lange Selektoren selten von Vorteil</li>
+                            <li>Sinnvoll verschachteln</li>
+                            <li>"Muss ich so tief gehen?"</li>
+                        </ul>
+                    </section>
+
                 </section>
 
                 <section data-background="#1A5951"  class="text-left">
                     <section><h2>Variablen</h2></section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            - wiederkehrende Elemente
-                                - Farben
-                                - Einheiten (px, em, rem, etc...)
-                                - Schriften
-                            - Schnelles Ändern von Eigenschaften möglich.
-                            - Einmal setzen - mehrfach verwenden
-                        </script>
+                    <section>
+                        <ul>
+                            <li>wiederkehrende Elemente</li>
+                            <li>
+                                <ul>
+                                    <li>Farben</li>
+                                    <li>Einheiten (px, em, rem, etc..)</li>
+                                    <li>Schriften</li>
+                                </ul>
+                            </li>
+                            <li>Schnelles Ändern von Eigenschaften möglich</li>
+                            <li>Einmal setzen - mehrfach verwenden</li>
+
+                        </ul>
                     </section>
 
 
@@ -278,7 +355,9 @@ h1,h2,h3{
     font-family: $font-size-large $font-head;
     color: $prim1; }
     </code></pre>
-
+                        <aside>
+                            <p>Aufgabe: Bisherige Aufgabe um Variablen erweitern. </p>
+                        </aside>
                     </section>
                 </section>
 
@@ -379,19 +458,22 @@ h1,h2,h3{
     -o-border-radius: 10px;
     border-radius: 10px; }
     </code></pre>
-
+                        <aside class="notes">
+                            <p>Mixin: Mixin zum Projekt hinzufügen. Und einbauen</p>
+                        </aside>
                     </section>
                 </section>
 
                 <section data-background="#1A5951" class="text-left">
                     <section><h2>Funktionen</h2></section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            - Sass bietet viele verschiedene nützliche Funktionen "out of the box"
-                            - Erlaubt bspw. Farbmanipulationen und Rechenoperationen
-                            - Statt eines Farbwerts kann eine Farbfunktion aufgerufen werden
-                            - Statt eines Zahlenwertes (z.B. 10px) können Rechenoperationen benutzt werden
-                        </script>
+                    <section >
+                        <ul>
+                            <li>Sass bietet verschiedene nützliche Funktionen</li>
+                            <li>"out of the box</li>
+                            <li>Erlaubt Farbmanipulationen und Rechenoperationen</li>
+                            <li>Statt eines Farbwertes kann eine Farbfunktion aufgerufen werden</li>
+                            <li>Statt eines Zahlenwertes (z.B. 100px) können Rechenoperationen benutzt werden</li>
+                        </ul>
                     </section>
 
                     <section>
@@ -417,21 +499,27 @@ background-color: complement($textfarbe);
                             </code></pre>
 
                                 <small><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html">Dokumentation</a> | <a href="http://sassme.arc90.com/">Live Demo</a> | <a href="http://jackiebalzer.com/color">Visual Guide</a></small>
-                        </script>
+                            <p>Aufgabe: Variablen einbauen. </p>
                     </section>
                 </section>
 
                 <section data-background="#469D7A" class="text-left">
                     <section><h2>Operatoren</h2></section>
-                    <section data-markdown>
-                        <script type="text/template">
+                    <section>
+                        <ul>
+                            <li>Sass bietet einfache mathematische Operatoren</li>
+                            <li><code>+, -, *, /, %</code></li>
+                            <li>Erlaubt dynamisches CSS</li>
+                            <li>Ideal für Responsive Layout</li>
+                        </ul>
+                        <aside class="notes">
                             - Sass bietet einfache mathematische Operatoren
                                 - `+` Addition
                                 - `-` Subtraktion
                                 - `*` Multiplikation
                                 - `/` Division
                                 - `%` Prozentrechnung
-                        </script>
+                        </aside>
                     </section>
 
                     <section>
@@ -449,11 +537,14 @@ aside[role="complimentary"] {
   width: 300px / 960px * 100%;
 }
                         </code></pre>
+                        <aside class="notes">
+                            <li>Was macht es?</li>
+                        </aside>
                     </section>
 
                     <section>
                         <h3>Beispiel: Ausgabe</h3>
-                        <pre><code data-trim>
+                        <pre class="fragment"><code data-trim>
 .container {
   width: 100%;
 }
@@ -528,6 +619,9 @@ aside[role="complimentary"] {
   border-color: yellow;
 }
     </code></pre>
+                        <aside class="notes">
+                            <p>Aufabe: Könnt ihr Vererbung auf euer Projekt anwenden?</p>
+                        </aside>
                     </section>
                 </section>
 
@@ -740,6 +834,60 @@ $ie7-support
                             </small>
                     </section>
                 </section>
+
+                <section>
+                    <section><h2>OOCSS, SMACSS, BEM</h2></section>
+                    <section>
+                        <h3>OOCSS</h3>
+                        <ul>
+                            <li>Objekt Orientiertes CSS</li>
+                            <li>Abstrakte Form eines Moduls</li>
+                            <li>Allgemeine Objekte, stark wiederverwertbar</li>
+                            <li><a href="http://oocss.org">oocss.org</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>SMACSS</h3>
+                        <ul>
+                            <li>Scalable and Modular Architecture for CSS</li>
+                            <li>Gratis eBook</li>
+                            <li>Behandelt den Aufbau von großen Projekten</li>
+                            <li>Oder Projekte die noch groß werden können</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>BEM</h3>
+                        <ul>
+                            <li>Block-Element-Modifier</li>
+                            <li><a href="http://bem.info">BEM</a></li>
+                            <li><a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/">MindBEMding</a></li>
+                        </ul>
+                        <pre><code data-trim>
+.person{}
+.person__hand{}
+.person--female{}
+.person--female__hand{}
+.person__hand--left{}
+                            </code></pre>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Objects in Spaaaaace</h2>
+                    </section>
+                    <section>
+                        <img src="img/objects.png" alt="">
+                        <p><small>Ein Konzept um Modulares SASS zu schreiben. Hier gehts zum <a href="https://medium.com/objects-in-space/f6f404727">Artikel.</a></small></p>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Fragen?</h2>
+                </section>
+
+                <section><h1>Schönes Wochenende</h1></section>
 
             </div>
         </div>
