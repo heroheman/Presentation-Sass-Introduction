@@ -36,6 +36,7 @@
 
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
+
                 <section>
                     <h1>SASS für Designer</h1>
                     <h3>Eine Einführung</h3>
@@ -44,144 +45,192 @@
                 </section>
 
                 <section>
-                    <section><h1>Teil 1: Setup</h1></section>
+                    <section><h2>Teil 1: Setup</h2></section>
+                </section>
+                <section>
                     <section>
                         <h2>HTML + CSS</h2>
-                        <h1>ist keine Programmierung</h1>
-                        <p>...wirklich nicht!</p>
+                        <h1 class="fragment">ist keine Programmierung</h1>
+                        <p class="fragment">...wirklich nicht!</p>
                     </section>
                     <section>
+                        <h2>Aha... <span class="fragment">Interessant...</span> <span class="fragment">Und?</span></h2>
                         <ul>
-                            <li>eine Auszeichnungssprache</li>
-                            <li>Attributenbasiert</li>
-                            <li>HTML CSS ist eure Bitch</li>
-                            <li>Lose RESPECT</li>
+                            <li class="fragment">Auszeichnungssprache</li>
+                            <li class="fragment">Attributenbasiert</li>
+                            <li class="fragment">Einfache, nicht ändernde Schreibweise</li>
+                            <li class="fragment">Lose the respect</li>
                         </ul>
                     </section>
                 </section>
 
                 <section>
                     <section>
-                        <h2>CSS ist nett, aber</h2>
+                        <h2>CSS ist nett, aber:</h2>
                         <ul>
                             <li>Es fehlen essentielle Features</li>
-                            <li>Viel Wiederholung</li>
-                            <li>Schwierig zu pflegen / warten</li>
-                            <li>Alles wiederholt sich</li>
-                            <li>Starr und unflexibel</li>
-                            <li>ziemlich repetiv</li>
+                            <li class="fragment" data-fragment-index="1">
+                                Viel <span class="fragment highlight-red" data-fragment-index="6">Wiederholung</span>
+                            </li>
+                            <li class="fragment" data-fragment-index="2">Schwierig zu pflegen / warten</li>
+                            <li class="fragment" data-fragment-index="3">Alles <span class="fragment highlight-red" data-fragment-index="6">wiederholt sich</span> sich</li>
+                            <li class="fragment" data-fragment-index="4">Starr und unflexibel</li>
+                            <li class="fragment" data-fragment-index="5">ziemlich <span class="fragment highlight-red" data-fragment-index="6">repetiv</span></li>
                         </ul>
                     </section>
 
                     <section>
                         <h2>SASS hingegen</h2>
                         <ul>
-                            <li>Erweitertes CSS mit zusätzlichen Features</li>
-                            <li>Sauber formatiert</li>
-                            <li>Leicht pflegbar</li>
-                            <li>Auto Didaktisch #TODO: Richtiges Wort?</li>
-                            <li>DRY</li>
+                            <li class="fragment">Erweitertes CSS mit zusätzlichen Features</li>
+                            <li class="fragment">Sauber formatiert</li>
+                            <li class="fragment">Leicht pflegbar</li>
+                            <li class="fragment">Schnell zu erlernen</li>
+                            <li class="fragment">"Don't repeat yourself"-Prinzip</li>
                         </ul>
                         <p>
-                            <strong>Im Wesentlichen: CSS wie es sein sollte!</strong>
+                            <strong class="fragment">Im Wesentlichen: CSS wie es sein sollte!</strong>
                         </p>
                     </section>
                 </section>
 
                 <section>
                     <section>
-                        <h2>SASS und CSS</h2>
-                        <p>Sass gibt es in zwei Varianten:</p>
-                        <p>`style.sass` - Keine Klammern, Semikolons, Einrückungsbasiert</p>
-                        <p>`style.scss` - Wie CSS</p>
-                        <p>Nachfolgende Beispiele basieren auf der `.scss` Syntax</p>
-                    </section>
-                    <section>
-                        <h2>Nicht zufrieden?</h2>
-                        <p>Versuchs mit LESS oder Stylus</p>
-                        <p>#TODO: Ausarbeiten, drastisch</p>
-                    </section>
-                </section>
-
-                <section>
-                    <section>
                         <h2>Installation</h2>
-                        <p>Es wird Ruby benötigt - vorinstalliert auf OSX und Linux, Rubyinstaller für Windows</p>
-                        <p>Ausserdem Rubygems - lassen sich als Paket installieren #TODO: Link</p>
-                        <p>gem install sass</p>
-                        <p><strong>DONE</strong></p>
+                        <ol>
+                            <li>Ruby <em>- vorinstalliert auf OSX und Linux, <a href="http://rubyinstaller.org/">Rubyinstaller</a> für Windows</em></li>
+                            <li>Rubygems <em>- vorinstalliert auf OSX und Linux, <a href="http://rubygems.org/pages/download">Download</a> für Windows</em></li>
+                            <li>Terminal öffnen: <code>sudo gem install sass</code></li>
+                            <li>Done</li>
+                        </ol>
                     </section>
                     <section>
                         <h2>Ausführen</h2>
-                        <p>#TODO: HIER BEFEHL REIN</p>
+                        <ol>
+                            <li>Im CSS Ordner eine <code>style.scss</code> erstellen ODER <span class="fragment highlight-green">vorhandende <code>style.css</code> in <code>style.scss</code> umbenennen</span></li>
+                            <li>Im Terminal zu euren CSS Ordner navigieren</li>
+                            <li><code>sass --watch style.scss:style.css</code></li>
+                            <li>Done</li>
+                        </ol>
+                    </section>
+
+                    <section>
+                        <h2>No Love for the Terminal?</h2>
+                        <h3 class="fragment">There is an <a href="http://sass-lang.com/install">app</a> for that!</h3>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h2>SASS und CSS</h2>
+                        <ul>
+                            <li>Sass hat zwei Varianten</li>
+                            <li>.SASS und .SCSS</li>
+                            <li>Nachfolgende Beispiele sind SCSS</li>
+                        </ul>
+                        <pre class="fragment"><code data-trim>
+// SASS
+.klassenname
+    display: block
+    float: left
+
+// SCSS
+.klassenname{
+    display: block;
+    float: left;
+}
+                            </code></pre>
+                        <aside class="notes">
+                            <ul>
+                                <li>LESS und Stylus erwähnen</li>
+                            </ul>
+                        </aside>
                     </section>
                 </section>
 
                 <section>
-                    <section><h1>Teil 2: Grundlegendes</h1></section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            ## Nesting / Verschachtelung
+                    <h2>TL;DR</h2>
+                        <li>HTML & CSS ist keine hohe Kunst</li>
+                        <li>CSS ist eigentlich ziemlich für'n A****</li>
+                        <li>SASS: *Thumbs up*</li>
+                        <li>Jede CSS Datei ist bereits eine SCSS Datei</li>
+                        <li>Installation mit <code>sudo gem install sass</code></li>
+                        <li>Ausführen mit <code>sass --watch style.scss:style.css</code></li>
+                        <li>Jede Menge GUIs / Apps verfügbar</li>
+                </section>
+
+                <section>
+                    <section><h2>Teil 2: Grundlegendes</h2></section>
+                </section>
+
+                <section>
+                    <section><h2>Verschachtelung (Nesting)</h2></section>
+                    <section>
                             <pre><code class="scss" data-trim>
-                            ul{
-                                padding: 0;
-                                li{
-                                    color: blue;
-                                    a.link{
-                                        text-decoration: none;
-                                        color: black;
-                                    }
-                                }
-                                a{
-                                    color: #C0FFEE;
-                                }
-                            }
+ul{
+    padding: 0;
+    li{
+        color: blue;
+        a.link{
+            text-decoration: none;
+            color: black;
+        }
+    }
+    a{
+        color: #C0FFEE;
+    }
+}
                             </code></pre>
-                            <pre><code data-trim>
-                            ul{
-                                padding: 0; }
-                            ul li {
-                                color: blue; }
-                            ul li a.link{
-                                text-decoration: none;
-                                color: black; }
-                            ul a {
-                                color: #C0FFEE; }
+                            <pre class="fragment"><code data-trim>
+ul{
+    padding: 0; }
+ul li {
+    color: blue; }
+ul li a.link{
+    text-decoration: none;
+    color: black; }
+ul a {
+    color: #C0FFEE; }
                                 </code></pre>
                         </script>
                     </section>
 
-                    <section data-markdown>
-                        <script type="text/template">
-                             ## Verschachtelung: &-Operator
-SCSS:
+                    <section>
+                            <h2>Verschachtelung: &-Operator</h2>
+                            <p><small>SCSS:</small></p>
 
-    a.mein-link {
-        &:hover{ text-decoration: underline; }
-        &:before, &:after{
-            content: "&mdash;";
-        }
-        &.active{
-            color: #f00;
-            &:hover{
-                color: black;
-            }
+            <pre><code data-trim>
+a.mein-link {
+    &:hover{ text-decoration: underline; }
+    &:before, &:after{
+        content: "&mdash;";
+    }
+    &.active{
+        color: #f00;
+        &:hover{
+            color: black;
         }
     }
+}
+                </code></pre>
 
-CSS
+                            <p class="fragment"><small>CSS</small></p>
 
-    a.mein-link:hover{ text-decoration: underline; }
-    a.mein-link:before, a:hover{ content: ""; }
-    a.mein-link.active{ color: #f00; }
-    a.mein-link.active:hover{ color: black; }
+<pre class="fragment"><code data-trim>
+a.mein-link:hover{ text-decoration: underline; }
+a.mein-link:before, a:hover{ content: ""; }
+a.mein-link.active{ color: #f00; }
+a.mein-link.active:hover{ color: black; }
+    </code></pre>
 
-                        </script>
                     </section>
+                </section>
 
+                <section>
+                    <section><h2>Variablen</h2></section>
                     <section data-markdown>
                         <script type="text/template">
-                            ## Variablen
                             - wiederkehrende Elemente
                                 - Farben
                                 - Einheiten (px, em, rem, etc...)
@@ -191,139 +240,494 @@ CSS
                         </script>
                     </section>
 
-                    <section data-markdown>
-                        <script type="text/template">
-                            ## Variablen
-    $font-main: "Fira Sans", Helvetica, "Comic Sans MS";
-    $font-head: "Droid Serif", Prestige, sans-serif;
-    $font-mono: Courier, mono;
 
-    $font-size-body: 67,5%;
-    $font-size-large: 32px;
-    $font-size-main: 1em;
+                    <section>
 
-    $prim1: #C0FFEE;
-    $prim2: #F00BAA;
-    $prim3: #B00B1E;
+<pre><code data-trim>
+$font-main: "Fira Sans", Helvetica, "Comic Sans MS";
+$font-head: "Droid Serif", Prestige, sans-serif;
+$font-mono: Courier, mono;
 
-    body{
-        font: $font-size-body $font-main;
-        background-color: $prim3; }
+$font-size-body: 67,5%;
+$font-size-large: 32px;
+$font-size-main: 1em;
 
-    h1,h2,h3{
-        font-family: $font-size-large $font-head;
-        color: $prim1; }
+$prim1: #C0FFEE;
+$prim2: #F00BAA;
+$prim3: #B00B1E;
 
+body{
+    font: $font-size-body $font-main;
+    background-color: $prim3;
+}
+h1,h2,h3{
+    font-family: $font-size-large $font-head;
+    color: $prim1; }
+    </code></pre>
 
-                        </script>
                     </section>
-                    <section data-markdown>
-                        <script type="text/template">
-                            ## Mixins
-                            - Mixins helfen wiederkehrende Attribute zu vereinfachen
-                            - Es können verschiedene CSS Anweisungen in einen Mixin deklariert werden.
-                            - "Variablen" für ganze CSS Abschnitte
-                            - Beispiel: Automatische Browser Prefixe, -moz, -webkit, -ms, etc...
-
-
-
-    @mixin mein-mixin{
-        .... stuff ....
-    };
-
-    @include mein-mixin;
-
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-mixins.<strong>scss</strong>
-
-    @mixin inline-block{
-        display: inline;
-        *zoom: 1;
-        display: inline-block;
-    }
-
-    .mein-element{
-        width: 300px;
-        @include inline-block;
-    }
-
-    .mein-anderes-element{
-        width: 200px;
-        @include inline-block;
-    }
-
-style.<strong>css</strong>
-
-    .mein-element{
-        width: 300px;
-        display: inline;
-        *zoom: 1;
-        display: inline-block;
-    }
-    .mein-anderes-element{
-        width: 200px;
-        display: inline;
-        *zoom: 1;
-        display: inline-block;
-    }
-
-
-                        </script>
-                    </section>
-
-                    <section data-markdown>
-                        <script type="text/template">
-                            ## Mixins mit Parameter
-
-                            - Mixins können auch Werte beim Aufruf übergeben bekommen
-                            - Ergebnis: Dynamische Ausgabe im CSS
-                            - Standardwert trotzdem möglich
-                        </script>
-                    </section>
-
-
-                    <section data-markdown>
-                        <script type="text/template">
-mixins.scss
-
-        @mixin border-radius($wert: 5px;){
-            -webkit-border-radius: $wert;
-            -moz-border-radius: $wert;
-            -ms-border-radius: $wert;
-            -o-border-radius: $wert;
-            border-radius: $wert;
-        }
-        .element-1{ @include border-radius; }
-        .element-2{ @include border-radius(10px); }
-
-style.scss
-
-        .element-1{
-            -webkit-border-radius: 5px;;
-            -moz-border-radius: 5px;;
-            -ms-border-radius: 5px;;
-            -o-border-radius: 5px;;
-            border-radius: 5px;; }
-
-        .element-2{
-            -webkit-border-radius: 10px;
-            -moz-border-radius: 10px;
-            -ms-border-radius: 10px;
-            -o-border-radius: 10px;
-            border-radius: 10px; }
-
-                        </script>
-                    </section>
-
                 </section>
 
+                <section>
+                    <section><h2>Mixins</h2></section>
+                    <section>
+                            <li> Mixins helfen wiederkehrende Attribute zu vereinfachen</li>
+                            <li> Es können verschiedene CSS Anweisungen in einen Mixin deklariert werden.</li>
+                            <li> "Variablen" für ganze CSS Abschnitte</li>
+                            <li> Beispiel: Automatische Browser Prefixe, -moz, -webkit, -ms, etc...</li>
+
+
+<pre><code data-trim>
+@mixin mein-mixin{
+    .... zeugs ....
+};
+
+@include mein-mixin;
+    </code></pre>
+
+                    </section>
+
+                    <section>
+                        <p><small>mixins.<strong>scss</strong></small></p>
+
+<pre><code data-trim>
+@mixin inline-block{
+    display: inline;
+    *zoom: 1;
+    display: inline-block;
+}
+
+.mein-element{
+    width: 300px;
+    @include inline-block;
+}
+
+.mein-anderes-element{
+    width: 200px;
+    @include inline-block;
+}
+    </code></pre>
+
+<p><small>style.<strong>css</strong></small></p>
+
+<pre><code data-trim>
+.mein-element{
+    width: 300px;
+    display: inline;
+    *zoom: 1;
+    display: inline-block;
+}
+.mein-anderes-element{
+    width: 200px;
+    display: inline;
+    *zoom: 1;
+    display: inline-block;
+}
+</code></pre>
+                    </section>
+
+                    <section><h2>Mixins mit Parameter</h2></section>
+                    <section>
+                            <li>Mixins können auch Werte beim Aufruf übergeben bekommen</li>
+                            <li>Ergebnis: Dynamische Ausgabe im CSS</li>
+                            <li>Standardwert trotzdem möglich</li>
+                    </section>
+
+
+                    <section>
+                            <p><small>mixins.scss</small></p>
+<pre><code data-trim>
+
+@mixin border-radius($wert: 5px;){
+    -webkit-border-radius: $wert;
+    -moz-border-radius: $wert;
+    -ms-border-radius: $wert;
+    -o-border-radius: $wert;
+    border-radius: $wert;
+}
+.element-1{ @include border-radius; }
+.element-2{ @include border-radius(10px); }
+    </code></pre>
+
+                            <p><small>style.scss</small></p>
+<pre class="fragment"><code data-trim>
+.element-1{
+    -webkit-border-radius: 5px;;
+    -moz-border-radius: 5px;;
+    -ms-border-radius: 5px;;
+    -o-border-radius: 5px;;
+    border-radius: 5px;; }
+
+.element-2{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border-radius: 10px; }
+    </code></pre>
+
+                    </section>
+                </section>
+
+                <section>
+                    <section><h2>Funktionen</h2></section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            - Sass bietet viele verschiedene nützliche Funktionen "out of the box"
+                            - Erlaubt bspw. Farbmanipulationen und Rechenoperationen
+                            - Statt eines Farbwerts kann eine Farbfunktion aufgerufen werden
+                            - Statt eines Zahlenwertes (z.B. 10px) können Rechenoperationen benutzt werden
+                        </script>
+                    </section>
+
+                    <section>
+                             <h3>Beispiele</h3>
+                             <pre><code data-trim>
+// Farbvariable
+$myColor: red;
+// Aufhellen
+$bright: lighten($myColor, 20%);
+// Abdunkeln
+$dark: darken($myColor, 20%);
+// Graustufen
+$grey: greyscale($color)
+// Sättigen & Entsättigen
+$effingYeah: saturate($color, 100%);
+$effingBoring: desaturate($color);
+
+// Funktionen können auch kombiniert werden
+$wtf: transparentize(darken($color, 20%), 0.5);
+
+// Kann auch direkt verwendet werden
+background-color: complement($textfarbe);
+                            </code></pre>
+
+                                <small>[Dokumentation](http://sass-lang.com/documentation/Sass/Script/Functions.html) | [Live Demo](http://sassme.arc90.com/) | [Visual Guide](http://jackiebalzer.com/color)</small>
+                        </script>
+                    </section>
+                </section>
+
+                <section>
+                    <section><h2>Operatoren</h2></section>
+                    <section data-markdown>
+                        <script type="text/template">
+                            - Sass bietet einfache mathematische Operatoren
+                                - `+` Addition
+                                - `-` Subtraktion
+                                - `*` Multiplikation
+                                - `/` Division
+                                - `%` Prozentrechnung
+                        </script>
+                    </section>
+
+                    <section>
+                        <h3>Beispiel</h3>
+                        <pre><code data-trim>
+.container { width: 100%; }
+
+article[role="main"] {
+  float: left;
+  width: 600px / 960px * 100%;
+}
+
+aside[role="complimentary"] {
+  float: right;
+  width: 300px / 960px * 100%;
+}
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h3>Beispiel: Ausgabe</h3>
+                        <pre><code data-trim>
+.container {
+  width: 100%;
+}
+
+article[role="main"] {
+  float: left;
+  width: 62.5%;
+}
+
+aside[role="complimentary"] {
+  float: right;
+  width: 31.25%;
+}
+                            </code></pre>
+
+                    </section>
+                </section>
+
+                <section>
+                    <section><h2>Vererbung</h2></section>
+                    <section>
+                        <ul>
+                            <li>Vererbung ist wichtiges Prinzip der Programmnierung</li>
+                            <li class="fragment">Es beschreibt die Möglichkeit eine Methode in eine andere einfließen zu lassen und </li>
+                            <li class="fragment">... blah blah blah blah</li>
+                            <li class="fragment">Wir machen keine Programmierung</li>
+                            <li class="fragment">In Sass beschreibt die Vererbung das Einfließen einer CSS Klasse in eine andere</li>
+                            <li class="fragment">Dies funktioniert mit `@extend`</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Beispiel: Warnfenster</h3>
+                        <pre><code data-trim>
+.message { // Die Basisklasse
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+.success { // Bei Erfolg,  ...
+  @extend .message;
+  border-color: green;
+}
+.error { // ...bei Misserfolg.
+  @extend .message;
+  border-color: red;
+}
+.warning { // ...Immerhin wurden wir gewarnt
+  @extend .message;
+  border-color: yellow;
+}
+                            </code></pre>
+                    </section>
+
+                    <section>
+                        <h3>Beispiel: Ausgabe</h3>
+<pre><code data-trim>
+.message, .success, .error, .warning {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+    </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>TL;DR</h2>
+                    <ul>
+                        <li class="fragment">CSS Klassen lassen sich verschachteln</li>
+                        <li class="fragment">Werte können in <code>$variablen</code> gespeichert werden</li>
+                        <li class="fragment">Wiederkehrende Elemente lassen sich mit <code>@mixin</code>'s einfügen</li>
+                        <li class="fragment">Ein <code>@mixin</code> kann auch mit Parametern aufgerufen werden</li>
+                        <li class="fragment">Es gibt Mixin-Bibliotheken wie <a href="http://compass.org">Compass</a> oder <a href="http://bourbon.io/">Bourbon</a>, die bereits viele Mixins mitbringen</li>
+                        <li class="fragment">Funktionen können viel Arbeit ersparen...</li>
+                        <li class="fragment">... und für uns rechnen</li>
+                        <li class="fragment">Vererbung ist super</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Teil 3: Erweitertes <span class="fragment">Grundwissen</span></h1>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Import / Sass Struktur</h2>
+                    </section>
+                    <section>
+                        <p>Eine CSS Datei wächst - dieses verhindert Übersicht. Hier kann auch SCSS nicht wirklich helfen </p>
+                        <p>Jedenfalls nicht wenn man in einer Datei arbeitet</p>
+                        <p>Sass bietet eine <code>@import</code> Möglichkeit. Mit dieser können Unterdateien in eine Hauptdatei importiert werden. Diese dient dann "Inhaltsverzeichnis"</p>
+                        <p>Diese Unterdateien werden mit einen Unterstrich gekennzeichnet. Beispiel: <code>_caroussel.scss</code></p>
+                        <p>Der Aufruf in der Hauptdatei z.B. <code>style.scss</code> erfolgt dann mit </p>
+                        <pre><code data-trim>
+                                 @import "caroussel";
+                            </code></pre>
+                        <p><strong>Beachten: </strong>Kein Unterstrich und Dateiendung mehr vorhanden</p>
+
+                    </section>
+                    <section>
+                        <h3>Beispiel Aufbau einer style.scss</h3>
+                        <pre><code data-trim>
+// Basis CSS - im Unterordner "base"
+@import "base/reset";
+@import "base/variablen";
+@import "base/mixins";
+@import "base/webfonts";
+@import "base/typography";
+
+// Module CSS - im Unterordner "module"
+@import "module/grid";
+@import "module/header";
+@import "module/footer";
+@import "module/navigation";
+@import "module/caroussel";
+// usw.
+                            </code></pre>
+                            <p><small>Sass beobachtet jede Änderung in einem Unterordner und kompiliert automatische eine neue <code>style.css</code></small></p>
+                    </section>
+                </section>
+
+                <section>
+                    <section><h2>Platzhalter</h2></section>
+                    <section>
+                        <ul>
+                            <li>CSS Klassen können mit <code>@extend</code> erweitert werden</li>
+                            <li>Die Basisklasse bleibt im CSS</li>
+                            <li>Auch wenn Sie nicht benutzt wird</li>
+                            <li>Lösung: Platzhalter Klassen</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Beispiel: Warnfenster II</h3>
+                        <pre><code data-trim>
+%message { // Die Basisklasse
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+.success { // Bei Erfolg,  ...
+  @extend %message;
+  border-color: green;
+}
+.error { // ...bei Misserfolg.
+  @extend %message;
+  border-color: red;
+}
+.warning { // ...Immerhin wurden wir gewarnt
+  @extend %message;
+  border-color: yellow;
+}
+                            </code></pre>
+                    </section>
+
+                    <section>
+                        <pre><code data-trim>
+.success, .error, .warning {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+                            </code></pre>
+                    </section>
+
+                    <section>
+                        <ul>
+                            <li>Die Klasse <code>.message</code> existiert nicht mehr</li>
+                            <li>Aufruf kann nur mit <code>.error</code> erfolgen</li>
+                            <li>Bibliotheken lassen sich so aufbauen</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section><h2>Media Queries</h2></section>
+                    <section>
+                        <ul>
+                            <li>Media Queries lassen sich schnell an einen CSS Modul heften</li>
+                            <li>Sass erstellt den Media Query für uns</li>
+                        </ul>
+                        <pre><code data-trim>
+.modul{
+    width: 100%;
+    padding: 1em;
+    @media screen and (min-width: 480px){
+        width: 50%;
+        padding: 0;
+        float: left;
+    }
+    @media screen and (min-width: 480px){
+        width: 30%;
+        padding: 2em;
+    }
+}
+                            </code></pre>
+                    </section>
+                    <section>
+                        <h3>Ausgabe</h3>
+                        <pre><code data-trim>
+.modul {
+    width: 100%;
+    padding: 1em;
+}
+@media screen and (min-width: 480px) {
+    .modul {
+        width: 50%;
+        padding: 0;
+        float: left;
+    }
+}
+@media screen and (min-width: 480px) {
+    .modul {
+        width: 30%;
+        padding: 2em;
+    }
+}
+                            </code></pre>
+                    </section>
+                </section>
+
+                <section>
+                    <section><h2>If/Else</h2></section>
+                    <section>
+                        <h2>Beispiel: Inline-Block II</h2>
+                        <pre><code data-trim>
+$ie7-support
+
+@mixin inline-block{
+    @if $ie7-support{
+        display: inline;
+        *zoom: 1;
+        display: inline-block;
+    } @else {
+        display: inline-block;
+    }
+}
+
+@mein-block{
+    @include inline-block();
+}
+                            </code></pre>
+                    </section>
+                    <section>
+                        <h2>Ausgabe</h2>
+                        <pre><code data-trim>
+// true, wir supporten IE7
+.mein-block{
+    display: inline;
+    *zoom: 1;
+    display: inline-block;
+}
+
+// false, kein Support
+.mein-block{
+    display: inline-block;
+}
+                            </code></pre>
+                            <small>
+                                <a href="http://www.florenz.co.uk/schleifen-und-bedingte-anweisungen-in-sass-for-each-while-if/">Weitere Sass Anweisungen</a>
+                            </small>
+                    </section>
+                </section>
 
             </div>
-
         </div>
 
         <script src="lib/js/head.min.js"></script>
