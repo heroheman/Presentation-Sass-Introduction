@@ -17,6 +17,8 @@
         <link rel="stylesheet" href="css/reveal.min.css">
         <link rel="stylesheet" href="css/theme/default.css" id="theme">
 
+        <link rel="stylesheet" href="css/additional.css">
+
         <!-- For syntax highlighting -->
         <link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -32,22 +34,22 @@
 
     <body>
 
-        <div class="reveal">
+        <div class="reveal linear">
 
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
 
-                <section>
+                <section data-background="#10393D" class="text-left">
                     <h1>SASS für Designer</h1>
                     <h3>Eine Einführung</h3>
                     <p>Florenz Heldermann / Interface Engineer</p>
                     <small><a href="http://twitter.com/track02">@track02</a></small>
                 </section>
 
-                <section>
+                <section data-background="#1A5951" class="text-left">
                     <section><h2>Teil 1: Setup</h2></section>
                 </section>
-                <section>
+                <section data-background="#1A5951" class="text-left">
                     <section>
                         <h2>HTML + CSS</h2>
                         <h1 class="fragment">ist keine Programmierung</h1>
@@ -76,7 +78,7 @@
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#469D7A" class="text-left">
                     <section>
                         <h2>CSS ist nett, aber:</h2>
                         <ul>
@@ -106,7 +108,7 @@
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#10393D" class="text-left">
                     <section>
                         <h2>Installation</h2>
                         <ol>
@@ -133,7 +135,7 @@
 
                 </section>
 
-                <section>
+                <section data-background="#1A5951" class="text-left">
                     <section>
                         <h2>SASS und CSS</h2>
                         <ul>
@@ -161,7 +163,7 @@
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#469D7A" class="text-left">
                     <h2>TL;DR</h2>
                         <li>HTML & CSS ist keine hohe Kunst</li>
                         <li>CSS ist eigentlich ziemlich für'n A****</li>
@@ -172,11 +174,11 @@
                         <li>Jede Menge GUIs / Apps verfügbar</li>
                 </section>
 
-                <section>
+                <section data-background="#A4C290" class="text-left">
                     <section><h2>Teil 2: Grundlegendes</h2></section>
                 </section>
 
-                <section>
+                <section data-background="#A4C290" class="text-left">
                     <section><h2>Verschachtelung (Nesting)</h2></section>
                     <section>
                             <pre><code class="scss" data-trim>
@@ -227,7 +229,7 @@ a.mein-link {
 }
                 </code></pre>
 
-                            <p class="fragment"><small>CSS</small></p>
+                            <p class="fragment"><small>CSS:</small></p>
 
 <pre class="fragment"><code data-trim>
 a.mein-link:hover{ text-decoration: underline; }
@@ -239,7 +241,7 @@ a.mein-link.active:hover{ color: black; }
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#1A5951"  class="text-left">
                     <section><h2>Variablen</h2></section>
                     <section data-markdown>
                         <script type="text/template">
@@ -280,7 +282,7 @@ h1,h2,h3{
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#10393D" class="text-left">
                     <section><h2>Mixins</h2></section>
                     <section>
                             <li> Mixins helfen wiederkehrende Attribute zu vereinfachen</li>
@@ -381,7 +383,7 @@ h1,h2,h3{
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#1A5951" class="text-left">
                     <section><h2>Funktionen</h2></section>
                     <section data-markdown>
                         <script type="text/template">
@@ -419,7 +421,7 @@ background-color: complement($textfarbe);
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#469D7A" class="text-left">
                     <section><h2>Operatoren</h2></section>
                     <section data-markdown>
                         <script type="text/template">
@@ -470,7 +472,7 @@ aside[role="complimentary"] {
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#A4C290" class="text-left">
                     <section><h2>Vererbung</h2></section>
                     <section>
                         <ul>
@@ -529,7 +531,7 @@ aside[role="complimentary"] {
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#469D7A" class="text-left">
                     <h2>TL;DR</h2>
                     <ul>
                         <li class="fragment">CSS Klassen lassen sich verschachteln</li>
@@ -543,11 +545,11 @@ aside[role="complimentary"] {
                     </ul>
                 </section>
 
-                <section>
+                <section data-background="#1A5951" class="text-left">
                     <h1>Teil 3: Erweitertes <span class="fragment">Grundwissen</span></h1>
                 </section>
 
-                <section>
+                <section data-background="#1A5951" class="text-left">
                     <section>
                         <h2>Import / Sass Struktur</h2>
                     </section>
@@ -585,7 +587,7 @@ aside[role="complimentary"] {
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#469D7A" class="text-left">
                     <section><h2>Platzhalter</h2></section>
                     <section>
                         <ul>
@@ -649,7 +651,7 @@ aside[role="complimentary"] {
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#1A5951" class="text-left">
                     <section><h2>Media Queries</h2></section>
                     <section>
                         <ul>
@@ -696,7 +698,7 @@ aside[role="complimentary"] {
                     </section>
                 </section>
 
-                <section>
+                <section data-background="#10393D" class="text-left">
                     <section><h2>If/Else</h2></section>
                     <section>
                         <h2>Beispiel: Inline-Block II</h2>
